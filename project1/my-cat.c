@@ -1,9 +1,9 @@
 /*
- * Author: Faith Kilonzi
- * File:   my-cat.c
+ * @Author: Faith Kilonzi
+ * @File:   my-cat.c
  * This program implements the cat unix/linux command whereby 
- *it reads a given file supplied by the user and prints out the contents
- * of the file using C (high-level language)
+ *it reads a given file(s) supplied by the user and prints out the contents
+ * of the file using C (high-level programming language)
  */
 
 #include <stdio.h>
@@ -12,14 +12,14 @@
 
 int main(int argc, char **argv)
 {
-    int i;  // counter to loop through argv file argument 
+    int i;  // counter to loop through argv file arguments
     FILE *fil;  //the file to be opened
     int ch;
 
     for(i = 1; i < argc; i++) {
         fil = fopen(argv[i], "r"); // opens a file and returns its handle 
         if(fil == 0) {
-           printf( argv[1],"cannot open file\n");
+           printf("cannot open file\n");
            exit(1);
           return 1;
         }
@@ -32,4 +32,5 @@ int main(int argc, char **argv)
     }
 
     return 0;
+   exit(0);
 }
