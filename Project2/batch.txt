@@ -1,0 +1,4 @@
+ls
+mkdir name
+cd name
+mkdir tryu
